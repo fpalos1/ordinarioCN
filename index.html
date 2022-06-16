@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    body {
+        position: relative; 
+        margin: 10px;
+    }
+
+    nav{
+    float: right;
+    }
+
+    nav ul li{
+        list-style: none;
+        margin-left: 50px;
+        float: left;
+        padding: 6px 0;
+        position: relative;
+        }
+    
+
+    nav ul li a{
+        text-decoration:solid;
+        /*color: #444;*/
+        font-weight: bold;
+    }
+
+    nav ul li a::before{
+        display: block;
+        content: '';
+        width: 0%;
+        background: #444;
+        height: 5px;
+        top: 0;
+        position: absolute;
+        transition: width 0.2s;
+    }
+    
+    nav ul li a:hover::before{
+    width: 100%;
+    }
+    
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 50%;
+        height: 50%;
+    }
+
+    p{
+        line-height : 35px;
+        font-size: large;
+        text-align: justify;
+    }
+
+    h4{
+        color: rgb(50, 152, 177);
+    }
+
+    section.contenedor-columnas{
+        width: 100%;
+        margin:auto;
+        margin-bottom: 50px;
+    }
+
+    div.columnasx4{
+        width: 25%;
+        float: left;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    /*
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+    color: black;
+    }*/
+
+
+    /*h1{
+    color: rgb(138, 206, 206);
+    }*/
+
+    </style>
+    <title>Ordinario</title>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+        <ul class="navbar-nav">
+            <li class="navbar-item">
+                <a class="nav-link" href="#section1"><b>Inicio</b></a>
+            </li>
+
+            <li class="nav-item dropdown show">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown" aria-expanded="true">Computo en la nube</a>
+                <div class="dropdown-menu show">
+                    <a class="dropdown-item active" href="#section2.1">Servicios en la nube</a>
+                    <a class="dropdown-item" href="#section2.2">Cloud Google</a>
+                    <a class="dropdown-item" href="#section2.3">Git y Github desktop</a>
+                    <a class="dropdown-item" href="#section2.4">Investigar sobre GTP3</a>
+                    <a class="dropdown-item" href="#section2.5">Normas ISO que existen para computo en la nube</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="section1" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color: #e2e5ecdc">
+        <div id="demo" class="carousel slide" data-ride="carousel"><br>
+
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class=""></li>
+                <li data-target="#demo" data-slide-to="1" class="active"></li>
+                <li data-target="#demo" data-slide-to="2" class=""></li>
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <center>
+                    <img src="nube.png" alt="computo1" width="350" height="50">
+                    </center>
+                </div>
+                <div class="carousel-item active">
+                    <center>
+                    <img src="nube2.png" alt="computo2" width="350" height="50">
+                    </center>
+                </div>
+                <div class="carousel-item">
+                    <center>
+                    <img src="nube3.png" alt="computo3" width="350" height="50">
+                    </center>
+                </div>
+            </div>
+            <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #08f;"></path></svg>
+            </div>
+
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon" style="color: #ed1b24"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon" style="color: #ed1b24"></span>
+            </a>
+        </div>
+    </div>
+    <div>
+        <div id="section2.1" class="container-fluid bg-light" style="padding-top:70px;padding-bottom:70px;">
+            <h1>Computo en la nube</h1><br>
+            <h3><strong>Servicios en la nube</strong></h3><br>
+            <h4><i><strong>Ciclo de vida de un servicio en la nube</strong></i></h4>
+            <p>En general, los diferentes ciclos de vida que se han mencionado contemplan las mismas fases, pero nombradas y agrupadas de diferente manera. Para tener una visión más clara del ciclo de vida de los servicios cloud, a continuación se presenta brevemente la descripción cada <br><br>
+
+            <strong> Fase de determinación de requisitos: </strong><br>
+            Esta fase incluye la elaboración de la lista de requisitos y los criterios de selección del cliente, la especificación de los sistemas y subsistemas que se moverán al cloud, el tipo del cloud (pública, privada, comunitaria o híbrida) y el modelo de servicio que se va a utilizar(SaaS, PaaS e IaaS). <br><br>
+                
+            <strong>Fase de adquisición: </strong><br>
+            En esta fase se realiza la evaluación de los proveedores, la estimación de la demanda y la definición de oportunidades y riesgos. La fase de adquisición en un entorno cloud es más compleja que en un entorno tradicional de TI (Tecnologías de la información). <br>
+                
+            En el análisis de soporte y servicios de monitorización, la fase de adquisición implica el cálculo del modelo de negocio, el soporte in situ de los proveedores, las negociaciones del contrato (p. ej. fijación de precios y acuerdos de nivel de servicio), y la planificación de proyectos para las fases restantes. La fase de adquisición finaliza con la evolución final y la decisión de selección. <br><br>
+
+            <strong>Fase de desarrollo </strong><br>
+            Esta fase está dedicada al proveedor e incluye la planificación de actividades tales como la evaluación del potencial de mercado, la identificación de las aplicaciones o servicios existentes que podrían ser provisionados como un servicio cloud, la selección de un modelo de precios, la especificación de requisitos funcionales y no funcionales, y el diseño de la arquitectura. Por otra parte, la fase de desarrollo incluye actividades relacionadas con la implementación del servicio, como la programación, configuración de hardware, pruebas y despliegue. <br>
+                
+            La fase de desarrollo se ejecuta en paralelo a las fases de cumplimiento de contrato. Las nuevas características, actualizaciones y parches se aplican mientras que el servicio cloud funciona en forma continua. Por lo tanto, dependiendo de las actualizaciones realizadas en el servicio, con el tiempo se necesita establecer cambios a los contratos con los clientes existentes. En particular, las actividades de gestión de versiones son de importancia crucial para el desarrollo de servicios cloud, como actualizaciones del servicio que no se extenderán a los clientes individuales, sino a toda la base de clientes de un proveedor. <br><br>
+
+            <strong>Fase de integración:</strong><br>
+            Esta fase se inicia después de que el servicio cloud está integrado en el entorno de TI del cliente, implementado y en ejecución. Para el proveedor, la fase de cumplimiento del contrato incluye el mantenimiento, la evolución (ocurriendo de nuevo las fases de operación y de integración), el soporte y las actividades de facturación. <br>
+            En el lado del cliente, la fase de cumplimiento del contrato incluye el uso del servicio,así como las actividades de monitorización y evaluación. <br><br>
+
+            <strong>Fase de retiro</strong><br>
+            Esta fase se refiere al cese de un servicio cloud, es decir, cuando el proveedor interrumpe el servicio o cuando el cliente cambia a otro proveedor. En ambos casos, el cliente necesita comenzar de nuevo todo este ciclo de vida o bien retornar al modelo TI tradicional. Por otro lado, las actividades del proveedor incluyen la eliminación de los datos de los clientes para cumplir con la normativa de protección de datos.
+            </p><br><br>
+            <h4><i><strong>Categoría de los servicios</strong></i></h4>
+            <p><strong> Infraestructura como servicio (IaaS):</strong><br>
+            Infraestructura como servicio es la categoría más flexible de servicios en la nube. Su objetivo es ofrecer el mayor control posible sobre el hardware proporcionado que se ejecuta en la aplicación (servidores de infraestructura de TI y máquinas virtuales, almacenamiento y sistemas operativos). En vez de comprar hardware, con IaaS, se alquila. Se trata de una infraestructura informática que se aprovisiona y administra a través de Internet. <br><br>
+            <strong>Plataforma como servicio (PaaS) </strong><br>
+
+            PaaS proporciona un entorno para compilar, probar e implementar aplicaciones de software. El objetivo de PaaS es ayudarle a crear una aplicación rápidamente sin tener que administrar la infraestructura subyacente. Por ejemplo, al implementar una aplicación web con PaaS, no tiene que instalar un sistema operativo o un servidor web, ni tampoco actualizaciones del sistema. <br>
+
+            PaaS es un entorno de desarrollo e implementación completo en la nube, con recursos que permiten a las organizaciones ofrecerlo todo, desde sencillas aplicaciones basadas en la nube hasta sofisticadas aplicaciones empresariales habilitadas para la nube. <br><br>
+            <strong>Software como servicio (SaaS)</strong><br>
+            
+            SaaS es software que se hospeda y administra de forma centralizada para el cliente final. Normalmente se basa en una arquitectura donde se usa una versión de la aplicación para todos los clientes y la licencia se obtiene a través de una suscripción mensual o anual. Microsoft 365, Skype y Dynamics CRM Online son ejemplos perfectos de software como servicio.
+            </p><br><br>
+
+            <h3>Despliegue de un servicio en la nube</h3><br>
+            <h4><strong>Modelos de despliegue</strong></h4><br>
+
+            <p><strong>Nube Privada</strong><br>
+            Es creada con los recursos propios de la empresa (máquinas, redes, almacenamiento, centros de datos, etc.) y está destinada al uso exclusivo por parte de la misma. Requiere grandes medidas de seguridad con un servicio de acceso y disponibilidad muy alto para poder gestionar la información en todo momento. Todas las ventajas de seguridad y disponibilidad que aporta una solución de Nube Privada se reporta en el precio. Los costes tanto de inversión como de mantenimiento suelen ser más altos. <br>
+
+            <strong>Nube publica</strong><br>
+            Pertenece y es administrado por empresas que ofrecen acceso rápido a recursos informáticos para otras empresas o personas. De esta manera, las empresas no necesitan adquirir hardware, software o infraestructura de soporte, ya que de ello se encargarán los proveedores. Es importante destacar que también la disponibilidad, seguridad y transparencia de la plataforma dependerán del proveedor. <br>
+
+            <strong>Nube hibrida</strong><br>
+            Combina soluciones privadas y públicas. Las empresas podrán dividir sus servicios, manteniendo algunos con acceso privado dentro de la empresa y otros que pueden ser aprovechados donde se necesiten a través de la Nube Pública. También existirán algunos riesgos al estar en dos nubes, a largo plazo es fácil integrar datos más sensibles en la Nube Pública y otros no tanto en la Nube Privada.
+            </p><br><br>
+
+            <h4><strong>Selección del modelo de servicio en la nube y modelo de despliegue</strong></h4><br>
+
+            <p> <strong> 1. Plantea una situación con un cliente: </strong><br>
+                Ya sea que vayas a crear un proceso nuevo o el mapa de uno actual, empieza con una situación de servicio al cliente que desees analizar. En este paso, puede ser beneficioso incluir a clientes reales en la conversación a fin de garantizar que tu escenario sea tan fiel a las experiencias reales (o deseadas) de los clientes como sea posible. <br> <br>
+                
+                <strong> 2. Traza el mapa de la experiencia del cliente </strong><br>
+                Sea cual sea la situación que elijas, traza los pasos que dará el cliente en orden cronológico. <br><br>
+                
+                <strong>3. Parte de las acciones del cliente </strong><br>
+                Una vez que hayas establecido toda la experiencia de servicio al cliente, agrega las demás categorías, es decir, acciones de primera línea y acciones entre bastidores, procesos de soporte, prueba física, tiempo, etc., a las acciones del cliente. Por ejemplo, qué hacen los empleados durante cada paso que da el cliente o qué procesos de soporte entran en juego. <br><br>
+                
+                <strong>4. Define carriles de responsabilidades y acciones</strong><br>
+                Usa las diferentes líneas de separación para mantener cada categoría en su propio carril claramente definido y para representar las maneras en que interactúan los diferentes actores durante el proceso de servicio: <br><br>
+                
+                • Línea de interacción: donde el cliente interactúa con el servicio y los empleados.
+                Línea de visibilidad: donde el empleado o los procesos organizacionales no son evidentes para el cliente. <br>
+                • Línea de acción interna: donde los socios o empleados que no tienen contacto con el cliente se incorporan para respaldar el servicio. <br><br>
+
+                <strong> 5. Define las relaciones multidisciplinarias </strong><br>
+                Después de definir cada categoría, agrega otro nivel de detalle a tu modelo de servicio usando flechas como indiciadores. Si bien ya dispusiste los pasos en orden cronológico dentro de cada carril, también puedes mostrar las relaciones y dependencias que existen en las diferentes categorías con la ayuda de flechas. Si una figura tiene una sola flecha, el intercambio ocurre en la dirección indicada. Una flecha doble significa que debe existir algún tipo de acuerdo o que las dos figuras dependen una de otra de algún modo. En conjunto, estos elementos te ayudarán a ver soluciones para el proceso de servicio y para los problemas relacionados con la experiencia del cliente. <br>
+            </p>
+        </div>
+    </div>
+    <div id="section2.2" class="container-fluid bg-light" style="padding-top:70px;padding-bottom:70px;">
+        <div id="demo" class="carousel slide" data-ride="carousel"><br>
+        <h3><strong>Cloud Google</strong></h3><br>
+        <p>Olvídate de depender de proveedores gracias al compromiso de Google Cloud con el software libre y los entornos de nube híbrida y multinube. Ahora podrás usar tus datos y ejecutar tus aplicaciones en cualquier tipo de nube o entorno. Aprovecha al máximo la información valiosa que extraes de tus datos gracias a las funciones de aprendizaje automático y de analíticas avanzadas que te ofrece Google Cloud. Nuestra plataforma de aprendizaje automático y analíticas de datos sin servidor te permite automatizar procesos, hacer predicciones inteligentes y optimizar la gestión y las operaciones. <br>
+        
+        Ejecuta tus cargas de trabajo en una nube que ofrece un valor cero neto de emisiones de carbono. El 100 % del consumo eléctrico necesario para ejecutar los productos y servicios de Google Cloud se compensa generando su equivalente con energías renovables. Google Cloud ayuda a tu empresa a prosperar en términos de sostenibilidad, ya que es el único gran proveedor de soluciones en la nube que compra suficiente energía renovable como para satisfacer las necesidades de todas sus operaciones. <br>
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                <th>Servicios de Google Cloud</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <a href="https://cloud.google.com/storage/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=latam-MX-all-es-dr-SKWS-all-all-trial-e-dr-1011454-LUAC0009359&amp;utm_content=text-ad-none-any-DEV_c-CRE_346533890558-ADGP_Hybrid+%7C+SKWS+-+EXA+%7C+Txt+~+Storage_Cloud+Storage-KWID_43700043798699838-kwd-325804706764&amp;utm_term=KW_cloud%20storage-ST_Cloud+Storage&amp;gclid=Cj0KCQjw_4-SBhCgARIsAAlegrUuDGuVdf6t3CcQjDku-dn0dyNpb-zvGCRWqvBxxY69pywdjz1BWS4aAjjuEALw_wcB&amp;gclsrc=aw.ds">Cloud Storage</a></td>
+                </tr>
+                <tr>
+                    <td> <a href="https://cloud.google.com/blog/topics/developers-practitioners/google-cloud-networking-overview">Google Cloud Networking</a></td>
+                </tr>
+                <tr>
+                    <td> <a href="https://cloud.google.com/iot-core?hl=es">IoT Core</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <div id="section2.3" class="container-fluid bg-light" style="padding-top:70px;padding-bottom:70px;">
+            <div id="demo" class="carousel slide" data-ride="carousel"><br>
+            </div>
+            <h3><strong>Git y Github Desktop</strong></h3><br>
+            <h4><strong>Git</strong></h4>
+            <section>
+            <div>
+                <h5><strong>¿En que consiste?</strong></h5>
+                <p>Es un sistema de control de versiones, una forma más clara de explicarlo es con videojuegos, cuando estás jugando, tú sabes que puedes guardar tu progreso en diferentes zonas de la partida, así no perderás nada en caso de morir y podrás reanudar todo desde dicho punto. Así funciona Git, pero a diferencia de los videojuegos, en vez de guardar el progreso de una partida, guarda un desarrollo, ya sea de proyectos de software o incluso un fragmento de código como un Script. <br>
+                </p>
+
+                <h5><strong>Ventajas</strong></h5>
+                <p>
+                • Sistema distribuido, sin un punto central de fallo, que permite el trabajo incluso sin conexión. <br>
+
+                • Superrápido y ligero, optimizado para hacer operaciones de control muy rápidas.
+                Crear ramas y mezclarlas es rápido y poco propenso a problemas, al contrario que en otros sistemas tradicionales. <br>
+
+                • La integridad de la información está asegurada gracias a su modelo de almacenamiento, que permite predecir este tipo de problemas. En sistemas tradicionales este era un problema grave. <br>
+
+                • Permite flujos de trabajo muy flexibles. <br>
+
+                • El concepto de área de preparación o staging permite versionar los cambios como nos convenga, no todo o nada. <br>
+
+                • ¡Es gratis! y de código abierto.
+                </p><br>
+
+                <h5><strong>Desventajas</strong></h5>
+
+                <p>• Es más complejo que los sistemas centralizados tradicionales porque entran en juego más repositorios, más operaciones y más posibilidades para trabajar en equipo, que hay que decidir. <br>
+
+                • La curva de aprendizaje es empinada. Lo básico lo aprendes enseguida, pero la realidad te demuestra que no es suficiente "tocar de oído" con él. La documentación es tan compleja que muchas veces no resulta de ayuda. <br>
+                    
+                • Los comandos y algunos conceptos que usa pueden llegar a ser confusos, al igual que algunos mensajes que muestra. <br>
+                    
+                • Por defecto, se lleva mal con archivos binarios muy grandes, como vídeos o documentos gráficos muy pesados. Por suerte existen soluciones para ello (Git LFS).
+                </p><br>
+
+                <h5><strong>¿Qué tipos de archivos tabaja?</strong></h5>
+
+                <p> En Git existen 4 tipos de archivis: Blop, tree, commit, annotated tag. estos cuatro tipos tipos de objetos permiten almacenar archivos y monitoriar los cambios
+                </p><br>
+
+                
+            </div>
+            <div>
+                <h4><strong> Github Desktop</strong></h4>
+
+                <h5><strong>¿En que consiste?</strong></h5>
+
+                <p>es un servicio basado en la nube que aloja un sistema de control de versiones (VCS) llamado Git. Éste permite a los desarrolladores colaborar y realizar cambios en proyectos compartidos, a la vez que mantienen un seguimiento detallado de su progreso. Para entender mejor qué es GitHub y cómo funciona, tenemos que profundizar.
+                </p><br>
+
+                <h5><strong>Ventajas</strong></h5>
+
+                <p>• Servicio gratuito, aunque también tiene servicios de pago.
+                • Búsqueda muy rápida en las estructura de los repos. <br>
+                • Amplia comunidad y fácil encontrar ayuda. <br>
+                • Ofrece prácticas herramientas de cooperación y buena integración con Git. <br>
+                • Fácil integrar con otros servicios de terceros. <br>
+                • Trabaja también con TFS, HG y SVN.
+                </p> <br>
+                <h5><strong>Desventajas</strong></h5>
+                <p>• No es absolutamente abierto. <br>
+                • Tiene limitaciones de espacio, ya que no puedes exceder de 100MB en un solo archivo, mientras que los repositorios están limitados a 1GB en la versión gratis.
+                </p>
+
+                <h5><strong>¿Qué tipos de archivos trabaja?</strong></h5><br>
+
+                <p>Los archivos que agregues a un repositorio mediante un navegador están limitados a 25 MB.
+                </p><br>
+
+                <h5><strong>¿Qué tipos de lenguajes trabaja?</strong></h5>
+
+                <p>Los lenguajes centrales para las caracteristicas de GitHub incluyen a C,C++, C#, Go, Java, Javascipt, Python, Ruby, Scala, y TypeScript.
+
+                </p>
+
+                <h5><strong>Diferencias que existen entre los 2</strong></h5>
+
+                <p>Github facilita la colaboración con Git. Es una plataforma que puede mantener repositorios de código en almacenamiento basado en la nube para que varios desarrolladores puedan trabajar en un sólo proyecto y ver las ediciones de cada uno en tiempo real. <br>
+                
+                Git es un software de VCS local que permite a los desarrolladores guardar instantáneas de sus proyectos a lo largo del tiempo, generalmente es mejor para uso personal. <br>
+
+                Github es una plataforma basada en la web que incorpora las características de control de versiones de git para que puedan ser utilizadas de forma colaborativa. También incluye características de gestión de proyectos y equipos, así como oportunidades para la creación de redes y la codificación social.
+                </p>
+            </div>
+            </section>
+            
+        </div>
+    </div>
+    <div>
+        <div id="section2.4" class="container-fluid bg-light" style="padding-top:70px;padding-bottom:70px;">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+            </div>
+            <div>
+                <h3><strong>Investigación sobre GTP3</strong></h3>
+                <h4><strong>¿Qué es?</strong></h4>
+                <p>GPT-3 es un programa informático creado por la empresa privada OpenAI de San Francisco. Es una red neuronal gigantesca y, como tal, forma parte del segmento de aprendizaje profundo del aprendizaje automático, que en sí mismo es una rama del campo de la informática conocida como inteligencia artificial o IA. El programa es mejor que cualquier programa anterior para producir líneas de texto que suenan como si hubieran sido escritas por un humano. </p><br>
+
+                <h4><strong>Historia sobre GTP3</strong></h4>
+
+                <p>Es la tercera generación de los modelos de predicción de lenguaje perteneciente a la serie GPT, creados por OpenAI, un laboratorio de investigación de inteligencia artificial con sede en San Francisco. GPT-3 fue introducido en mayo de 2020 y, hasta julio de 2020, se encontraba en fase beta. Es parte de una tendencia en sistemas de procesamiento de lenguaje natural (NLP) basados en "representaciones de lenguaje pre-entrenadas" Previo a la liberación de GPT-3, el modelo de lenguaje más grande era Turing NLG desarrollado por Microsoft, presentado en febrero de 2020, con una capacidad diez veces menor que el de GPT-3. <br>
+
+                GPT-3 fue presentado oficialmente el 28 de mayo de 2020, a través de la publicación de la investigación realizada en coautoría por 31 investigadores e ingenieros de OpenAI y de la Universidad John Hopkins,nota titulada Language Models are Few-Shot Learners.
+                </p> <br>
+                
+                <h4><strong>¿Cómo funciona?</strong></h4>
+
+                <p> El programa se encuentra actualmente en una versión beta privada para la cual las personas pueden inscribirse en una lista de espera. OpenAI lo ofrece como una API accesible a través de la nube, y las empresas a las que se les ha concedido acceso han desarrollado algunas aplicaciones intrigantes que utilizan la generación de texto para mejorar todo tipo de programas, desde la simple respuesta a preguntas hasta la producción de código de programación.<br>
+                
+                Junto con el potencial de automatización, vienen grandes inconvenientes. GPT-3 requiere mucha computación, lo que lo coloca más allá del uso de la mayoría de las empresas en cualquier forma imaginable en las instalaciones. El texto generado puede ser impresionante a primera vista, pero las composiciones largas tienden a perder un poco de sentido. Y tiene un gran potencial para amplificar los prejuicios, incluidos el racismo y el sexismo.
+                </p><br>
+
+                <h4><strong>Ventajas o beneficios</strong></h4>
+
+                <p>La razón por la que este avance podría ser útil para las empresas es que tiene un gran potencial para automatizar tareas. GPT-3 puede responder a cualquier texto que una persona escriba en la computadora con un nuevo fragmento de texto que sea apropiado para el contexto. Escribe una oración completa en inglés en un cuadro de búsqueda, por ejemplo, y es más probable que obtengas alguna respuesta en oraciones completas que sea relevante. Eso significa que GPT-3 puede amplificar el esfuerzo humano en una amplia variedad de situaciones, desde preguntas y respuestas para el servicio al cliente hasta la búsqueda de documentos de debida diligencia y la generación de informes. </p><br>
+                
+                <h4><strong>Capacidades que tiene</strong></h4>
+
+                <p>La versión completa de GPT-3 tiene una capacidad de 175.000 millones de parámetros de aprendizaje automatizado, lo cual supera la magnitud de su predecesor, GPT-2. <br>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="section2.5" class="container-fluid bg-light" style="padding-top:70px;padding-bottom:70px;">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+            </div>
+            <h3><strong>Normas ISO que existen para computo en la nuube</strong></h3>
+            <section class="contenedor-columnas">
+                <div class="columnasx4">
+                    <h4><strong>ISO 27017</strong></h4>
+                    <p>La norma ISO 27017 proporciona controles para proveedores y clientes de servicios en la nube. A diferencia de muchas otras normas relacionadas con la tecnología, la norma ISO 27017 aclara las funciones y las responsabilidades para ayudar a que los servicios en la nube sean tan seguros como el resto de los datos incluidos en un Sistema de Gestión de la Información certificado.La norma ISO 27017 proporciona una guía con 37 controles en la nube basados en ISO 27002. Además, ofrece siete nuevos controles en la nube que tratan los siguientes puntos: <br>
+                    • Quién es el responsable de lo que sucede entre el proveedor del servicio y el clienteLa eliminación de activos cuando un contrato se resuelve. <br>
+                    • Protección y separación del entorno virtual del cliente. <br>
+                    Configurar una máquina virtual. <br>
+                    • Operaciones y procedimientos administrativos relacionados con el entorno en la nube. <br>
+                    • Seguimiento de la actividad de clientes en la nubeAlineación del entorno de la red virtual y en la nube</p>
+                </div>
+                <div class="columnasx4">
+                    <h4><strong>ISO 27018</strong></h4>
+                    <p>Con la prestación de servicios en la nube crece la preocupación de la protección de datos personales y las maneras de generar procesos de seguridad que garanticen la menor pérdida de ellos a manos de piratas informáticos con fines malintencionados.
+
+                    Utilizando los principios de las normas de la familia de la ISO 27001 en seguridad de la información; se crea la norma ISO 27018 para promover dentro de los proveedores de servicios cloud una infraestructura válida que pueda ser certificada y que preste un servicio garantiza con la mayor seguridad en la cobertura de los datos personales de los clientes.
+                        
+                    Esta norma permite garantizar a cualquier persona, que los datos alojados en los servicios cloud prestados no tendrán ningún propósito diferente al expresado y consentido por cada uno de los dueños de dichos datos. Medidas de la norma: <br>
+                    • El proveedor deberá proporcionar las herramientas del servicio. <br>
+                    • El proveedor deberá velar por el cumplimiento del tratamiento de datos. <br>
+                    • Se debe seguir la normativa de ley. <br>
+                    • Normalizar la subcontratación de servicios.
+                </p>
+                </div>
+                <div class="columnasx4">
+                    <h4><strong>ISO 27036</strong></h4>
+                    <p>La norma ISO 27036, esta dividida en cuatro partes y es una de las normas perteneciente a la familia ISO 27000, referida a la Seguridad de la información para las relaciones con proveedores, ofrece orientación sobre la evaluación y el tratamiento de los riesgos de información involucrados en la adquisición de bienes y servicios de proveedores. La norma se aplica a las relaciones comerciales entre compradores y proveedores de diversos bienes y servicios, tales como: <br>
+                    
+                    • Suministro de hardware, software y servicios TIC, incluidos los servicios de telecomunicaciones e Internet. <br>
+                    • Externalización de servicios de computación en la nube. <br>
+                    • Otros servicios como guardias de seguridad, limpiadores, mensajería, mantenimiento de equipos, servicios de consultoría y asesoramiento especializado, etc. <br>
+                    • Productos y servicios a medida donde el adquirente especifica los requisitos y normalmente tiene un papel activo en el diseño del producto. <br>
+                    • Servicios públicos como energía eléctrica, combustibles y agua.
+                    </p>
+                </div>
+                <div class="columnasx4">
+                    <h4><strong>ISO/IEC 17788:2014</strong></h4>
+                    <p>proporciona una visión general de la computación en la nube junto con un conjunto de términos y definiciones. Es una base terminológica para los estándares de computación en la nube. Es aplicable a todo tipo de organizaciones (por ejemplo, empresas comerciales, agencias gubernamentales, organizaciones sin fines de lucro).</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
